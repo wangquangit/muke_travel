@@ -6,10 +6,13 @@ import router from './router'
 
 // npm install fastclick --save
 import fastClick from 'fastclick'
-import './assets/style/reset.css'
+import 'styles/reset.css'
 // 解决客户端不同浏览器的问题
 
-import './assets/style/border.css'
+// iconfont
+import 'styles/iconfont.css'
+
+import 'styles/border.css'
 // 1像素解决方案
 
 // 解决click延迟300毫秒
