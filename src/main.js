@@ -3,9 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import fastClick from 'fastclick'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
 
 // npm install fastclick --save
-import fastClick from 'fastclick'
 import 'styles/reset.css'
 // 解决客户端不同浏览器的问题
 
@@ -18,6 +20,8 @@ import 'styles/border.css'
 // 解决click延迟300毫秒
 Vue.config.productionTip = false
 fastClick.attach(document.body)
+
+Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false
 
