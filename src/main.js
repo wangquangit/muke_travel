@@ -4,6 +4,18 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+// npm install fastclick --save
+import fastClick from 'fastclick'
+import './assets/style/reset.css'
+// 解决客户端不同浏览器的问题
+
+import './assets/style/border.css'
+// 1像素解决方案
+
+// 解决click延迟300毫秒
+Vue.config.productionTip = false
+fastClick.attach(document.body)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
