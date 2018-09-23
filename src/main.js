@@ -8,19 +8,19 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
 // npm install fastclick --save
-import 'styles/reset.css'
 // 解决客户端不同浏览器的问题
+import 'styles/reset.css'
 
-// iconfont
+// iconfont:图标图片
 import 'styles/iconfont.css'
 
-import 'styles/border.css'
 // 1像素解决方案
+import 'styles/border.css'
 
 // 解决click延迟300毫秒
-Vue.config.productionTip = false
 fastClick.attach(document.body)
 
+// 轮播相关
 Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false
