@@ -56,7 +56,6 @@ export default {
         // 让区域内都可以滑动
         height : 0
         padding-bottom : 50%
-    .icons
         margin-top : .1rem
         .icon
             height : 0
