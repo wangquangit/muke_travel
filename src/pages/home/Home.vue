@@ -26,6 +26,7 @@ export default {
     HomeWeekend
   },
   mounted () {
+    // 生命周期钩子函数
     this.getHomeInfo()
   },
   methods: {
