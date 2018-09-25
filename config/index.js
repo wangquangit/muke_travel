@@ -10,7 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      // 静态文件路径的配置,当访问'/api'地址时自动转换为'/static/mock/'路径
+      '/api': {
+        target: 'http://localhost:8081',
+        pathRewrite: {
+          '^/api': '/static/mock/'
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
