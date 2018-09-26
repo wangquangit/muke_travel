@@ -13,9 +13,9 @@ module.exports = {
     proxyTable: {
       // 静态文件路径的配置,当访问'/api'地址时自动转换为'/static/mock/'路径
       '/api': {
-        target: 'http://localhost:8081',
+        target: 'http://localhost:8081', // 非本地json数据请求接口
         pathRewrite: {
-          '^/api': '/static/mock/'
+          '^/api': '/static/mock/' //  请求本地json数据的接口
         }
       }
     },
