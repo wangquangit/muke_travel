@@ -19,12 +19,19 @@ export default {
     return {
       showAbs: true,
       opacityStyle: {
+        // 初始化透明度
         opacity: 0
       }
     }
   },
+  // keep-alive组件激活时生命周期钩子函数
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  // keep-alive组件跳转时生命周期钩子函数(页面跳转时执行)
+  deactivated () {
+    // 页面跳转后对scroll事件进行解绑
+    window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     handleScroll () {
@@ -32,7 +39,7 @@ export default {
       const top = document.documentElement.scrollTop
       if (top > 60) {
         // 下拉距离大于60显示header栏
-        let opacity = top / 140
+        let opacity = top / 160
         opacity = opacity > 1 ? 1 : opacity
         this.opacityStyle = { opacity }
         this.showAbs = false
