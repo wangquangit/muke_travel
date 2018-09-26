@@ -11,12 +11,16 @@
         </div>
       </div>
     </div>
-    <common-gallary :imgs="gallaryImgs" v-show="showGalary" @close="handleGallaryClose"></common-gallary>
+    <fade-animation>
+      <!-- 新增详情页到大图渐隐渐现效果 -->
+      <common-gallary :imgs="gallaryImgs" v-show="showGalary" @close="handleGallaryClose"></common-gallary>
+    </fade-animation>
   </div>
 </template>
 
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fade/FadeAnimation'
 export default {
   name: 'DetailBanner',
   props: {
@@ -31,7 +35,8 @@ export default {
     }
   },
   components: {
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   },
   methods: {
     handleBannerClick () {
