@@ -1,6 +1,6 @@
 <template>
     <ul class="list">
-        <li class="item" v-for="item of letters" :key="item" :ref="item" @touchstart="hanldeTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd" @click="handleLetterClick">{{item}}</li>
+        <li class="item" v-for="item of letters" :key="item" :ref="item" @touchstart.prevent="hanldeTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd" @click="handleLetterClick">{{item}}</li>
     </ul>
 </template>
 
