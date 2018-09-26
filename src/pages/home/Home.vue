@@ -17,6 +17,11 @@ import HomeWeekend from './components/Weekend'
 import axios from 'axios'
 import { mapState } from 'vuex'
 
+// 当当前组件足够大时可以使用箭头函数在components中引入以上组件
+// 如果组件不够大,则不需要异步引入,否则反而是的响应时间过长
+// 如:(HomeHeader: () => import('./components/Header'))
+// 此方法只有需要该组件时才进行异步加载引入,
+
 export default {
   name: 'Home',
   components: {

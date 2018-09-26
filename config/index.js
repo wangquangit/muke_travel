@@ -52,13 +52,14 @@ module.exports = {
   },
 
   build: {
+    // 打包部分配置项
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '/', // 配置访问路径
 
     /**
      * Source Maps
